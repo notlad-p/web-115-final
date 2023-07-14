@@ -2,10 +2,77 @@
 <html lang="en">
   <head>
     <title>WEB-115 Final Project</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      input {
+        margin: 4px 0 12px 0;
+      }
+
+      .user-info-container {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        padding: 12px;
+      }
+
+      .day-container {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        padding: 12px;
+      }
+
+      .buttons-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+      }
+    </style>
   </head>
   <body>
+    <h1>Weekly Meal Plan</h1>
+
+    <form>
+      <!-- USER INFO -->
+      <div class="user-info-container">
+        <input type="text" id="name" name="name" placeholder="Name" />
+        <input type="text" id="email" name="email" placeholder="Email" />
+        <textarea
+          id="goals"
+          name="goals"
+          placeholder="Goals"
+          rows="4"
+          cols="50"
+        ></textarea>
+      </div>
+
+      <!-- BUTTONS FOOTER -->
+      <div class="buttons-footer">
+        <div>
+          <button>Clear</button>
+          <button>Print</button>
+          <button>Download</button>
+        </div>
+        <div>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+
     <script src="projectJS.js"></script>
   </body>
 </html>
