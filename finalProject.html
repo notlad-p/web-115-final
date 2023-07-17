@@ -4,53 +4,27 @@
     <title>WEB-115 Final Project</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      h1 {
-        text-align: center;
-      }
-
-      form {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      input {
-        margin: 4px 0 12px 0;
-      }
-
-      .user-info-container {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid black;
-        padding: 12px;
-      }
-
-      .day-container {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid black;
-        padding: 12px;
-      }
-
-      .buttons-footer {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 24px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Weekly Meal Plan</h1>
+    <!-- BANNER -->
+    <header>
+      <img src="meal-plan-banner.png" alt="Meal Plan Banner" />
+    </header>
 
     <form>
       <!-- USER INFO -->
       <div class="user-info-container">
+        <h2>User Info</h2>
         <input type="text" id="name" name="name" placeholder="Name" />
-        <input type="text" id="email" name="email" placeholder="Email" />
+        <!-- using type="email" and "required" for email validation -->
+        <input
+          type="email"
+          required
+          id="email"
+          name="email"
+          placeholder="Email"
+        />
         <textarea
           id="goals"
           name="goals"
@@ -62,14 +36,8 @@
 
       <!-- BUTTONS FOOTER -->
       <div class="buttons-footer">
-        <div>
-          <button>Clear</button>
-          <button>Print</button>
-          <button>Download</button>
-        </div>
-        <div>
-          <button type="submit" id="submit">Submit</button>
-        </div>
+        <button type="reset">Clear</button>
+        <button type="submit" id="submit">Submit</button>
       </div>
     </form>
 
